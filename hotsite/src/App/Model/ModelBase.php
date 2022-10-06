@@ -23,10 +23,10 @@ class ModelBase
     /** 
      * Método responsável por retornar as consultas em um formato array
      */
-    public function Result($rs): array
+    public static function Result($rs): array
     {
 
-        $classNameChild = get_class($this);
+        $classNameChild = get_called_class();
 
         $result = [];
 

@@ -6,6 +6,6 @@ class NotfoundController
 {
     public function index()
     {
-        echo "<hr> ************** < Controller não encontrado > **************<hr>";
+        echo '<div class="alert alert-warning" role="alert">Controller não encontrado!</div>';
     }
 }

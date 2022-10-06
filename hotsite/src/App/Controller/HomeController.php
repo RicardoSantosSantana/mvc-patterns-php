@@ -7,18 +7,16 @@ use Tlv\Hotsite\App\Model\Postagem;
 
 class HomeController
 {
-    private Postagem $Postagem;
-
-    public function __construct()
-    {
-        $this->Postagem = new Postagem;
-    }
 
     public function index()
     {
         try {
-            $posts = $this->Postagem->ListAll();
-            var_dump($posts);
+            $posts = Postagem::ListAll();
+
+            $loader = new \Twig\Loader\FilesystemLoader('App/View');
+            $twig = new \Twig\Environment($loader);
+            $template = $twig->load('home.html');
+            echo $template->render(['posts' => $posts]);
         } catch (Exception $e) {
             echo $e->getMessage();
         }
