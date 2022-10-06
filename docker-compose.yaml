@@ -1,0 +1,48 @@
+version: "3.0"
+services:
+
+  apache:
+    build: ./php
+    container_name: apache
+    ports:
+      - "8080:80"
+    links:
+      - mysql
+    volumes:
+      - ./hotsite/:/var/www/html
+    networks:
+      - node-network
+    working_dir: /var/www/html
+
+  mysql:
+    image: rssantan/mysql8dev
+    container_name: mysql
+    env_file: ./.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - node-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - mysql
+    env_file: ./.env
+    restart: always
+    ports:
+      - 8085:80
+    networks:
+      - node-network
+    environment:
+      - PMA_HOST=${MYSQL_SERVER}
+      - PMA_PORT=${MYSQL_PORT}
+      - DATABASE_DRIVER=pdo_mysql
+      - PMA_ARBITRARY=1
+
+networks:
+  node-network:
+    driver: bridge

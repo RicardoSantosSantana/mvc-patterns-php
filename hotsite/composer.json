@@ -1,0 +1,20 @@
+{
+    "name": "tlv/hotsite",
+    "description": "Projeto de demonstração de uso de classes",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tlv\\Hotsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RicardoSantosSantana",
+            "email": "ricardo@needsolution.com.br"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
