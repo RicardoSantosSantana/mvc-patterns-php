@@ -17,14 +17,22 @@ class PostController extends Controller
      */
     public static function list(): void
     {
-        self::$title_page = 'Listagem de Postagem';
         $posts = Postagem::ListAll();
-        echo self::View('/Post/list.html', ['posts' => $posts]);
+
+        echo self::View(
+            '/Post/list.html',
+            ['posts' => $posts],
+            ['title' => 'Listar Postagens']
+        );
     }
     public static function single($id): void
     {
-        self::$title_page = 'Detalhe de Post';
+
         $posts = Postagem::getById($id);
-        echo self::View('/Post/single.html', ['posts' => $posts]);
+        echo self::View(
+            '/Post/single.html',
+            ['posts' => $posts],
+            ['title' => 'Detalhe Postagens']
+        );
     }
 }

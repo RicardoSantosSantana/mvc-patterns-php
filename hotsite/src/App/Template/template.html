@@ -5,40 +5,41 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/Assets/css/style.css">
+    <link rel="stylesheet" href="../src/Assets/css/clientes.css">
 </head>
 
 <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="../src/Assets/images/LogoTlv.png" width="130" height="50" class="d-inline-block align-top" alt="">
-        </a>
-        <hr>
-
-
-
-        <hr>
-        <ul class="nav  nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link active" href="/src">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/src/?page=post&method=list">Postagem</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/src/?page=cliente&method=list">Clientes</a>
-            </li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <pre style="background-color:white">
-        <B>Author: </B>{{author}}<br>
-        <B>Idade: </B>{{idade}}<br>
-        <B>Title: </B>{{title}}<br>
-    </pre>
+        <div class="d-flex align-items-end">
+            <a class="navbar-brand" href="#">
+                <img src="../src/Assets/images/LogoTlv.png" width="130" height="50" class="d-inline-block align-top"
+                    alt="">
+            </a>
+            <nav class="navbar navbar-dark bg-dark  align-content-center">
+
+                <ul class="nav  nav-pills  justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/?page=post&method=list">Postagem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/src/?page=cliente&method=list">Clientes</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
         {{content_page}}
+
+        <pre style="background-color:white;padding:20px;margin-top:40px;">
+            <b>É POSSÍVEL INSERIR VARIÁVEIS QUE PODEM INFLUENCIAR O SEO</b><br>
+            <B>Author: </B>{{author}}<br>
+            <B>Age: </B>{{idade}}<br>
+            <B>Title: </B>{{title}}<br>
+        </pre>
     </div>
 </body>
 

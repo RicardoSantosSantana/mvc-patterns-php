@@ -1,0 +1,45 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,
+body {
+    background-image: url('../images/palmeiras.jpg');
+    background-size: contain;
+
+    font-family: 'Numans', sans-serif;
+}
+
+.logo {
+    text-align: center;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.subtitle {
+    color: white;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.panel_home {
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+}
+
+.page-sub-title {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}

@@ -10,10 +10,10 @@ namespace Tlv\Hotsite\Lib\Templates;
 class Template
 {
     /** 
-     * Função responsável por alterar os parametros de página {{param}}
+     * Método responsável por colocar todo o html de um template em memória e alterar os parametros da página {{param}}
      * @param array $page_params 
      */
-    public static function render(array $page_params)
+    public static function render(array $page_params): string
     {
         $template = 'default.html';
 

@@ -8,6 +8,6 @@ class HomeController extends Controller
     public function index()
     {
 
-        echo self::View('home.html');
+        echo self::View('home.html', [], ['title' => 'Bem vindo']);
     }
 }
