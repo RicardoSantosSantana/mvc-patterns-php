@@ -11,36 +11,20 @@ use Tlv\Hotsite\App\Model\Postagem;
 class PostController extends Controller
 {
     /** 
-     * Metódo index responsável por receber as requisicoes e os parametros do querystring
-     * @param array $params
-     */
-    public function index(...$params)
-    {
-
-        try {
-
-            if (isset($params['id'])) {
-                return  self::single($params['id']);
-            }
-
-            self::list();
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        }
-    }
-    /** 
      * @method list
      * @return void     
      * Método list responsável por listar todos os posts    
      */
     public static function list(): void
     {
+        self::$title_page = 'Listagem de Postagem';
         $posts = Postagem::ListAll();
         echo self::View('/Post/list.html', ['posts' => $posts]);
     }
-    public static function single($postID): void
+    public static function single($id): void
     {
-        $posts = Postagem::getById($postID);
+        self::$title_page = 'Detalhe de Post';
+        $posts = Postagem::getById($id);
         echo self::View('/Post/single.html', ['posts' => $posts]);
     }
 }

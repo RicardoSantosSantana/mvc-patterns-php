@@ -45,7 +45,7 @@ class Environment
     /** 
      * Método responsável por initializar as variáveis ambiente
      */
-    public static function init(): void
+    public static function start(): void
     {
         self::$environment = $_ENV['ENVIRONMENT'];
         self::$database_server = $_ENV['DATABASE_SERVER'];
@@ -58,7 +58,7 @@ class Environment
 
     public function __toString()
     {
-        self::init();
+        self::start();
         return json_encode([
             'environment' => self::$environment,
             'database_server' => self::$database_server,

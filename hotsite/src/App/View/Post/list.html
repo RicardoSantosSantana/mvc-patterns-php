@@ -1,4 +1,4 @@
-<div class="page-sub-title">Postagens</div>
+<div class="page-sub-title">{{title_page}}</div>
 
 <div class="row">
 
@@ -11,7 +11,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ post.title }}</h5>
                 <p class="card-text">{{ post.content }}</p>
-                <a href="/src/?page=post&id={{post.id}}" class="btn btn-primary">Go somewhere</a>
+                <a href="/src/?page=post&id={{post.id}}&method=single" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>

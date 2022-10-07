@@ -19,8 +19,6 @@ class Mysql implements DB
     public static function getConnection()
     {
 
-        Environment::init();
-
         $sConnection = sprintf(
             'mysql:dbname=%s;host=%s;port=%s;',
             Environment::$database_name,

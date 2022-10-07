@@ -1,26 +1,30 @@
-<h1>Clientes de Exemplo</h1>
+<div class="page-sub-title">Clientes de Exemplo</div>
 
-<div class="row">
+<div class="container">
+    <div class="jumbotron" id="panel_home">
+        <div class="row">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Celular</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cliente in clientes %}
+                    <tr>
+                        <th scope="row">{{cliente.id}}</th>
+                        <td>{{cliente.nome}}</td>
+                        <td>{{cliente.email}}</td>
+                        <td>{{cliente.celular}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Email</th>
-                <th scope="col">Celular</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for cliente in clientes %}
-            <tr>
-                <th scope="row">{{cliente.id}}</th>
-                <td>{{cliente.nome}}</td>
-                <td>{{cliente.email}}</td>
-                <td>{{cliente.celular}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        </div>
 
+    </div>
 </div>

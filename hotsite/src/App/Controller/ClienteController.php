@@ -5,24 +5,26 @@ namespace Tlv\Hotsite\App\Controller;
 use Exception;
 use Tlv\Hotsite\App\Model\Cliente;
 
-class ClienteController
+class ClienteController extends Controller
 {
-    private Cliente $Cliente;
-
-    public function __construct()
-    {
-        $this->Cliente = new Cliente;
-    }
-
-    public function index()
+    public function list()
     {
         try {
-            $clientes = $this->Cliente->ListAll();
 
-            $loader = new \Twig\Loader\FilesystemLoader('App/View');
-            $twig = new \Twig\Environment($loader);
-            $template = $twig->load('clientes.html');
-            echo $template->render(['clientes' => $clientes]);
+            $clientes = Cliente::ListAll();
+
+            $page_params = [
+                'title' => 'Lista de Clientes',
+                'author' => 'Uncle Phill',
+                'idade' => '44 anos',
+                'template' => 'template.html'
+            ];
+
+            $data = [
+                'clientes' => $clientes
+            ];
+
+            echo self::View('clientes.html', $data, $page_params);
         } catch (Exception $e) {
             echo $e->getMessage();
         }

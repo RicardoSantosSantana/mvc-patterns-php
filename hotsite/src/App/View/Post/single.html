@@ -1,21 +1,20 @@
-<div class="page-sub-title">Detalhes do Post</div>
-
+<div class="page-sub-title">{{title_page}}</div>
 <div class="row">
 
-    {% for post in posts %}
+
     <div class="col-md-12">
         <div class="card" style="width: 28rem;">
 
             <img src="https://api.lorem.space/image?w=550&h=350" class="card-img-top" alt="...">
 
             <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.content }}</p>
-                <small>{{post.created_at}}</small>
+                <h5 class="card-title">{{ posts[0].title }}</h5>
+                <p class="card-text">{{ posts[0].content }}</p>
+                <small>{{posts[0].created_at}}</small>
             </div>
         </div>
     </div>
-    {% endfor %}
+
 
 
 </div>

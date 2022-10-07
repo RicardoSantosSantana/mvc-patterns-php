@@ -4,7 +4,7 @@ namespace Tlv\Hotsite\App\Model;
 
 class Cliente extends Model
 {
-    public function ListAll()
+    public static function ListAll()
     {
         $conn = self::DB();
         $sql = "SELECT * FROM cliente ORDER BY id ASC";
