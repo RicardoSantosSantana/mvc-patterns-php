@@ -13,9 +13,11 @@ Exemplo de uso de Orientação a com uma arquitetura diferente da usada na TLV.
 *   Classes Estáticas
 *   Variáveis de Ambiente
 *   Interface - Contratos
+*   Object Calisthenics
+*   Pattern MVC
 *   Pattern Singleton
 *   Pattern Strategy
-
+ 
 * * *
 
 Developed by: TLV - IT Squad
