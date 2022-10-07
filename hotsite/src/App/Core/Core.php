@@ -25,6 +25,7 @@ class Core
             $controllerName = $this->ControllerNamespace . "NotfoundController";
         }
 
-        call_user_func_array(array(new $controllerName, $actionDefault), []);
+
+        call_user_func_array(array(new $controllerName, $actionDefault), $url);
     }
 }

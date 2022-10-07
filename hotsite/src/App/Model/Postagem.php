@@ -2,7 +2,7 @@
 
 namespace Tlv\Hotsite\App\Model;
 
-class Postagem extends ModelBase
+class Postagem extends Model
 {
     public static function ListAll()
     {
@@ -15,12 +15,13 @@ class Postagem extends ModelBase
         return self::Result($rs);
     }
 
-    public static function getPost(int $id)
+    public static function getById(int $post_id)
     {
         $conn = self::DB();
-        $sql = "SELECT * FROM postagem  WHERE id = {$id}";
+        $sql = "SELECT * FROM postagem  WHERE id = :id";
 
         $rs = $conn->prepare($sql);
+        $rs->bindValue(':id', $post_id);
         $rs->execute();
 
         return self::Result($rs);

@@ -2,7 +2,7 @@
 
 namespace Tlv\Hotsite\App\Model;
 
-class Cliente extends ModelBase
+class Cliente extends Model
 {
     public function ListAll()
     {

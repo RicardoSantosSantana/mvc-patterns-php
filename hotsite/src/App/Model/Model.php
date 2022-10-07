@@ -8,7 +8,7 @@ use Tlv\Hotsite\Lib\Connections\Mysql;
 /** 
  * Todas as Model devem estender dela
  */
-class ModelBase
+class Model
 {
     /** 
      * Função que recebe a conexão com o banco de dados, selecionado

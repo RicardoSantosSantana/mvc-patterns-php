@@ -1,0 +1,21 @@
+<div class="page-sub-title">Postagens</div>
+
+<div class="row">
+
+    {% for post in posts %}
+    <div class="col col-md-4">
+        <div class="card  h-100">
+
+            <img src="https://api.lorem.space/image?w=450&h=350" class="card-img-top" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.content }}</p>
+                <a href="/src/?page=post&id={{post.id}}" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+</div>
