@@ -17,6 +17,7 @@ Exemplo de uso de Orientação a com uma arquitetura diferente da usada na TLV.
 *   Pattern MVC
 *   Pattern Singleton
 *   Pattern Strategy
+*   Pattern Front Controller
  
 * * *
 

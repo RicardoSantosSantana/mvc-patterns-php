@@ -9,5 +9,6 @@ return array(
     '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     'a4a119a56e50fbb293281d9a48007e0e' => $vendorDir . '/symfony/polyfill-php80/bootstrap.php',
-    'bb8dc2324ea2203cbbc235e6735eb22d' => $baseDir . '/src/Config/Config.php',
+    '20b752a6a511fa5e95751663e9603de7' => $baseDir . '/src/Bootstrap/Bootstrap.php',
+    '56a98413b9866e7aeb00fc55a2720241' => $baseDir . '/src/Routes/Routes.php',
 );

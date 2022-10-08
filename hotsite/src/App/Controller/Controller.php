@@ -24,7 +24,7 @@ abstract class Controller
      * @param array $data
      * @param array $page_params deve ser usado para passar parametros para o template
      */
-    public static function View(string $view_file, array $data = [], array $page_params = []): void
+    public static function View(string $view_file, array $data = [], array $page_params = []): mixed
     {
         try {
 
@@ -39,10 +39,10 @@ abstract class Controller
 
             $result =  str_replace('{{content_page}}', $out, $template);
 
-            echo $result;
+            return $result;
         } catch (Exception $e) {
 
-            echo "<div class=' alert alert-warning m-4' role='alert'>{$e->getMessage()}</div>";
+            return "<div class=' alert alert-warning m-4' role='alert'>{$e->getMessage()}</div>";
         }
     }
 }

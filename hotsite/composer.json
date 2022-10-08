@@ -8,7 +8,8 @@
             "Tlv\\Hotsite\\": "src/"
         },
         "files": [
-            "src/Config/Config.php"
+            "src/Bootstrap/Bootstrap.php",
+            "src/Routes/Routes.php"
         ]
     },
     "authors": [
@@ -19,6 +20,7 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.4",
-        "twig/twig": "^3.4"
+        "twig/twig": "^3.4",
+        "coffeecode/router": "^2.0"
     }
 }

@@ -33,14 +33,17 @@ class PostController extends Controller
      * @return void     
      * Método single responsável por trazer um único post    
      */
-    public static function single($id): void
+    public static function single($params)
     {
 
-        $posts = Postagem::getById($id);
+        $posts = Postagem::getById($params['id']);
         echo self::View(
             '/Post/single.html',
             ['posts' => $posts],
-            ['title' => 'Detalhe Postagens']
+            [
+                'title' => 'Detalhe Postagens',
+                'template' => 'default.html'
+            ]
         );
     }
 }

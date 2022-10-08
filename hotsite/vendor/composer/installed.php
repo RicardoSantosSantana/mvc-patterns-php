@@ -3,13 +3,22 @@
         'name' => 'tlv/hotsite',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd88ee8e860c332c93cc927e22f02bd10beda5572',
+        'reference' => 'a65c3bb17e77d522b1c937b89964eced85956a18',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'coffeecode/router' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'reference' => 'a16770ae952ce3f91a04035a09be610a030e049c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../coffeecode/router',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.0',
             'version' => '1.1.0.0',
@@ -58,7 +67,7 @@
         'tlv/hotsite' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd88ee8e860c332c93cc927e22f02bd10beda5572',
+            'reference' => 'a65c3bb17e77d522b1c937b89964eced85956a18',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
