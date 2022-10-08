@@ -10,6 +10,7 @@ use Tlv\Hotsite\App\Model\Postagem;
  */
 class PostController extends Controller
 {
+
     /** 
      * @method list
      * @return void     
@@ -17,6 +18,7 @@ class PostController extends Controller
      */
     public static function list(): void
     {
+
         $posts = Postagem::ListAll();
 
         echo self::View(
@@ -25,6 +27,12 @@ class PostController extends Controller
             ['title' => 'Listar Postagens']
         );
     }
+
+    /** 
+     * @method single
+     * @return void     
+     * Método single responsável por trazer um único post    
+     */
     public static function single($id): void
     {
 

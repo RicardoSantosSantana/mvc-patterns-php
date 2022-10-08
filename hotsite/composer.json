@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "Tlv\\Hotsite\\": "src/"
-        }
+        },
+        "files": [
+            "src/Config/Config.php"
+        ]
     },
     "authors": [
         {

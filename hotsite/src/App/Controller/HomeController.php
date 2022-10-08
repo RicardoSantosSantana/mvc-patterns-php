@@ -5,9 +5,11 @@ namespace Tlv\Hotsite\App\Controller;
 class HomeController extends Controller
 {
 
-    public function index()
+    public function index(...$params)
     {
 
-        echo self::View('home.html', [], ['title' => 'Bem vindo']);
+        echo self::View('home.html', [], [
+            'title' => 'Bem vindo'
+        ]);
     }
 }

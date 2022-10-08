@@ -43,7 +43,7 @@ class Environment
     public static  string $database_port;
 
     /** 
-     * Método responsável por initializar as variáveis ambiente
+     * Método responsável por inicializar as variáveis ambiente
      */
     public static function start(): void
     {
